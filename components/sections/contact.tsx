@@ -43,6 +43,15 @@ export function Contact() {
 
   const [state, submitToFormspree] = useForm("mgonlqdy");
 
+  const formHasServerErrors =
+    !!state.errors && state.errors.getFormErrors().length > 0;
+
+  const emailHasServerErrors =
+    !!state.errors && state.errors.getFieldErrors("email").length > 0;
+
+  const messageHasServerErrors =
+    !!state.errors && state.errors.getFieldErrors("message").length > 0;
+
   const validate = (): boolean => {
     let isValid = true;
     const newErrors: ContactFormErrors = {
@@ -121,10 +130,10 @@ export function Contact() {
   }, [state.succeeded]);
 
   useEffect(() => {
-    if (!state.submitting && !state.succeeded && state.errors?.length > 0) {
+    if (!state.submitting && !state.succeeded && formHasServerErrors) {
       setShowSubmissionError(true);
     }
-  }, [state.errors, state.submitting, state.succeeded]);
+  }, [formHasServerErrors, state.submitting, state.succeeded]);
 
   return (
     <Section id="contact" className="bg-background">
@@ -265,7 +274,7 @@ export function Contact() {
                   placeholder="john@company.com"
                   aria-invalid={Boolean(errors.email)}
                   aria-describedby={
-                    errors.email || state.errors?.length > 0
+                    errors.email || emailHasServerErrors
                       ? "contact-email-error"
                       : undefined
                   }
@@ -327,7 +336,7 @@ export function Contact() {
                 rows={4}
                 aria-invalid={Boolean(errors.message)}
                 aria-describedby={
-                  errors.message || state.errors?.length > 0
+                  errors.message || messageHasServerErrors
                     ? "contact-message-error"
                     : undefined
                 }
