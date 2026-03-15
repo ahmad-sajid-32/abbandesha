@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+<div align="center">
+  <img src="public/logo.png" alt="Abbandesha Logo" width="200"/>
+</div>
+
+# Abbandesha Landing Page
+
+This is the landing page for Abbandesha, a modern and responsive website built with Next.js and Tailwind CSS.
+
+## 🚀 Getting Started
 
 First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Modern Stack:** Built with [Next.js](https://nextjs.org/) 14 (App Router) and [Tailwind CSS](https://tailwindcss.com/).
+- **Responsive Design:** Fully responsive and mobile-first design.
+- **Components:** A set of reusable components built with [Radix UI](https://www.radix-ui.com/).
+- **Icons:** A rich set of icons from [Lucide](https://lucide.dev/).
+- **Linting:** Code quality is maintained with [ESLint](https://eslint.org/).
+- **Styling:** CSS is written with [PostCSS](https://postcss.org/).
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+The project is organized as follows:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **app/:** Contains the main application logic, including pages and layouts.
+- **components/:** Contains all the reusable components.
+- **hooks/:** Contains custom hooks.
+- **lib/:** Contains utility functions.
+- **public/:** Contains all the static assets, such as images and fonts.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📖 Learn More
 
-## Deploy on Vercel
+To learn more about the technologies used in this project, see the following resources:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Radix UI Documentation](https://www.radix-ui.com/docs/primitives/overview/introduction)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ☁️ Deploy
+
+The easiest way to deploy this application is to use the [Vercel Platform](https://vercel.com/new).
